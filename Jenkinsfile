@@ -10,7 +10,7 @@ pipeline {
       stage ('Build Docker Image') {
          steps {
            script {
-             def dockerImage = docker.build("Jenkins-to-docker-image")
+             def dockerImage = docker.build("jenkins-to-docker-image")
              echo 'Docker Image Created Succesful'
            }
         }
@@ -18,7 +18,7 @@ pipeline {
       stage ('Create a Container') {
          steps {
            script {
-             docker.image('Jenkins-to-docker-image').run('-d --name cont-jen-to-doc')
+             docker.image('jenkins-to-docker-image').run('-d --name cont-jen-to-doc')
              echo 'Docker Container Started'
            }
         }
