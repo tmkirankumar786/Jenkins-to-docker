@@ -4,7 +4,7 @@ WORKDIR /JenkToDoc
 
 COPY . /JenkToDoc
 
-RUN apt install python
+RUN apt-get install python
 
 EXPOSE 7070
 
