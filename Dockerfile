@@ -1,10 +1,12 @@
 FROM python:latest
 
-WORKDIR /JenkToDoc/
+WORKDIR /JenkToDoc
 
-COPY . .
+COPY . /JenkToDoc
 
-RUN apt install python'
+RUN apt install python
+
+EXPOSE 7070
 
 CMD ['python', 'pythonapp.py']
 
